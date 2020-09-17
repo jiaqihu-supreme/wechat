@@ -12,8 +12,7 @@
       mode属性 渲染模式
       widthFix:让图片的标签宽高和图片标签的内容的宽高都等比例的发生变化
     -->
-</view>
-<view class="index_swiper">
+    <view class="index_swiper">
   <swiper 
   autoplay="true"
   indicator-dots="true"
@@ -26,3 +25,33 @@
     </swiper-item>
   </swiper>
 </view>  
+<view class="index_cate">
+ <navigator 
+ wx:for="{{cateList}}"
+ wx:key="name">
+  <image mode="widthFix" src="{{item.image_src}}"></image>
+</navigator>
+</view>
+<view class="index_floor">
+  <view class="floor_group" 
+   wx:for="{{floorList}}"
+   wx:for-item="item1"
+   wx:for-index="index1"
+   wx:key="floor_title"
+  >
+    <view class="floor_title">
+      <image mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
+    </view>
+    <view class="floor_content">
+      <navigator 
+       wx:for="{{item1.product_list}}"
+       wx:for-item="item2"
+       wx:for-index="index2"
+       wx:key="name"
+      >
+        <image mode="{{index2 === 0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}"></image>
+      </navigator>
+    </view>
+  </view>
+</view>
+</view>
