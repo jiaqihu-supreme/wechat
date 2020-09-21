@@ -1,0 +1,15 @@
+.search {
+  height: 80rpx;
+  background-color: var(--themeColor);
+}
+.search navigator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 80%;
+  margin: auto;
+  color:#666;
+  background-color: #fff;
+  border-radius: 10rpx;
+}

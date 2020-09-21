@@ -4,12 +4,17 @@
     <scroll-view class="left_menu"
      scroll-y="true"
     >
-     <view class="menu_item"
+     <view class="menu_item {{index === currentIndex?'active':''}}"
       wx:for="{{leftMenuList}}"
       wx:key="*this"
+      bindtap="handleItemTap"
+      data-index="{{index}}"
      >{{item}}</view>
     </scroll-view>
-    <scroll-view class="right_content" scroll-y="true"> 
+    <scroll-view class="right_content" 
+    scroll-y="true"
+    scroll-top="{{scrollTop}}"
+    > 
       <view class="goods_group"
        wx:for="{{rightContent}}"
        wx:key="cat_id"
@@ -25,6 +30,7 @@
           wx:key="cat_id"
           wx:for-item="item2"
           wx:for-index="index2"
+          url="/pages/goods_list/index?cid={{item2.cat_id}}"
           >
             <image mode="widthFix" src="{{item2.cat_icon}}"></image>
             <view>{{item2.cat_name}}</view>

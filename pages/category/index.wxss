@@ -11,7 +11,10 @@ page{
 .cates_container .left_menu {
   flex:2;
 }
-
+.cates_container .left_menu .active {
+  color: var(--themeColor);
+  border-left: 3px solid currentColor;
+}
 .cates_container .left_menu .menu_item {
   height: 80rpx;
   display: flex;
@@ -24,7 +27,7 @@ page{
 }
 .cates_container .right_content .goods_group {
   text-align: center;
-  margin: 20rpx auto;
+  /* margin: 20rpx auto; */
 }
 .cates_container .right_content .goods_list {
   display: flex;
