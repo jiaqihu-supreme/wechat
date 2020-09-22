@@ -1,6 +1,8 @@
 .search {
-  height: 80rpx;
+  height: 90rpx;
   background-color: var(--themeColor);
+  display: flex;
+  align-items: center;
 }
 .search navigator{
   display: flex;
